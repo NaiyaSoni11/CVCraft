@@ -248,3 +248,7 @@ button:hover {
     padding: 20px;
     border-radius: 20px;
 }
+#resumeContent {
+    background: white !important;
+    color: black !important;
+}

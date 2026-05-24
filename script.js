@@ -7,7 +7,7 @@ const projectsInput = document.getElementById("projects");
 const contactInput = document.getElementById("contact");
 const imageInput = document.getElementById("profileImage");
 
-function updateResume(){
+function updateResume() {
 
     document.getElementById("previewName").innerText =
         nameInput.value || "Your Name";
@@ -32,39 +32,61 @@ function updateResume(){
 
     const imageFile = imageInput.files[0];
 
-    if(imageFile){
+    if (imageFile) {
 
-        document.getElementById("previewImage").src =
-            URL.createObjectURL(imageFile);
+        const reader = new FileReader();
 
+        reader.onload = function(e) {
+            document.getElementById("previewImage").src = e.target.result;
+        };
+
+        reader.readAsDataURL(imageFile);
     }
-
 }
 
-
 nameInput.addEventListener("input", updateResume);
-
 titleInput.addEventListener("input", updateResume);
-
 aboutInput.addEventListener("input", updateResume);
-
 skillsInput.addEventListener("input", updateResume);
-
 educationInput.addEventListener("input", updateResume);
-
 projectsInput.addEventListener("input", updateResume);
-
 contactInput.addEventListener("input", updateResume);
-
 imageInput.addEventListener("change", updateResume);
 
-const downloadBtn = document.getElementById("downloadBtn");
 
-downloadBtn.addEventListener("click", function(){
+document.getElementById("downloadBtn")
+.addEventListener("click", function () {
 
-    const resume = 
-document.getElementById("resumeContent")
+    const resume =
+        document.getElementById("resumeContent");
 
-    html2pdf().from(resume).save("CVCraft_Resume.pdf");
+    const opt = {
+
+        margin: 0,
+
+        filename: 'CVCraft_Resume.pdf',
+
+        image: {
+            type: 'jpeg',
+            quality: 1
+        },
+
+        html2canvas: {
+            scale: 3,
+            useCORS: true
+        },
+
+        jsPDF: {
+            unit: 'mm',
+            format: 'a4',
+            orientation: 'portrait'
+        }
+
+    };
+
+    html2pdf()
+        .from(resume)
+        .set(opt)
+        .save();
 
 });
