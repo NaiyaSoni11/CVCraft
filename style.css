@@ -1,0 +1,250 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background: linear-gradient(135deg, #ff758c, #ff7eb3, #a18cd1);
+
+    padding: 20px;
+
+}
+
+.container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+.form-section,
+
+.resume-section {
+
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(12px);
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+
+}
+
+.form-section h1 {
+
+    color: white;
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+
+}
+
+.form-section p {
+
+    color: white;
+
+    margin-bottom: 25px;
+
+}
+
+input,
+
+textarea {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    margin-bottom: 15px;
+
+    font-size: 15px;
+
+    outline: none;
+
+}
+
+textarea {
+
+    height: 100px;
+
+    resize: none;
+
+}
+
+button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: linear-gradient(135deg, #ff4f81, #ff758c);
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+button:hover {
+
+    transform: scale(1.02);
+
+}
+
+.resume-card {
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 30px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.resume-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -50px;
+
+    right: -50px;
+
+    width: 140px;
+
+    height: 140px;
+
+    background: linear-gradient(135deg, #ff758c, #a18cd1);
+
+    border-radius: 50%;
+
+    opacity: 0.2;
+
+}
+
+.resume-card h2 {
+
+    color: #ff4f81;
+
+    font-size: 32px;
+
+    margin-bottom: 5px;
+
+}
+
+.resume-card h3 {
+
+    color: #777;
+
+    margin-bottom: 20px;
+
+}
+
+.resume-card p {
+
+    line-height: 1.6;
+
+    color: #444;
+
+}
+
+.resume-block {
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    background: #faf7ff;
+
+    border-radius: 15px;
+
+}
+
+.resume-block h4 {
+
+    color: #ff4f81;
+
+    margin-bottom: 8px;
+
+    font-size: 18px;
+
+}
+
+@media(min-width: 900px){
+
+    .container {
+
+        flex-direction: row;
+
+        align-items: flex-start;
+
+    }
+
+    .form-section,
+
+    .resume-section {
+
+        width: 50%;
+
+    }
+
+    .form-section {
+
+        position: sticky;
+
+        top: 20px;
+
+    }
+
+}
+#previewImage {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ff4f81;
+    margin-bottom: 20px;
+}
+
+#downloadBtn {
+    margin-bottom: 20px;
+}
+#resumeContent {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+}

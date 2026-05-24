@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVCraft</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- LEFT FORM SECTION -->
+
+        <div class="form-section">
+
+            <h1>✨ CVCraft</h1>
+
+            <p>Create your beautiful resume instantly.</p>
+
+            <input type="text" id="name" placeholder="Your Name">
+
+            <input type="text" id="title" placeholder="Professional Title">
+
+<input type="file" id="profileImage" accept="image/*">
+
+            <textarea id="about" placeholder="About Yourself"></textarea>
+
+            <input type="text" id="skills" placeholder="Skills (comma separated)">
+
+            <input type="text" id="education" placeholder="Education">
+
+            <input type="text" id="projects" placeholder="Projects">
+
+            <input type="text" id="contact" placeholder="Contact Info">
+
+            <button id="generateBtn">Generate Resume</button>
+
+        </div>
+
+
+        <!-- RIGHT RESUME PREVIEW -->
+
+        <div class="resume-section">
+
+<div class="resume-card">
+
+<button id="downloadBtn">Download PDF</button>
+
+<div id="resumeContent">
+
+<img id="previewImage" src="https://via.placeholder.com/120" alt="Profile">
+
+<h2 id="previewName">Your Name</h2>
+
+<h3 id="previewTitle">Professional Title</h3>
+
+<p id="previewAbout">
+    About yourself will appear here.
+</p>
+
+<div class="resume-block">
+
+    <h4>Skills</h4>
+
+    <p id="previewSkills"></p>
+
+</div>
+
+<div class="resume-block">
+
+    <h4>Education</h4>
+
+    <p id="previewEducation"></p>
+
+</div>
+
+<div class="resume-block">
+
+    <h4>Projects</h4>
+
+    <p id="previewProjects"></p>
+
+</div>
+
+<div class="resume-block">
+
+    <h4>Contact</h4>
+
+    <p id="previewContact"></p>
+
+</div>
+
+</div>
+
+</div>
+           
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
