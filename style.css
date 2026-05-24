@@ -252,3 +252,29 @@ button:hover {
     background: white !important;
     color: black !important;
 }
+@media print {
+
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .form-section {
+        display: none;
+    }
+
+    #downloadBtn {
+        display: none;
+    }
+
+    .resume-section {
+        width: 100%;
+        box-shadow: none;
+        background: white;
+    }
+
+    .resume-card {
+        box-shadow: none;
+    }
+
+}

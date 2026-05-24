@@ -53,40 +53,9 @@ projectsInput.addEventListener("input", updateResume);
 contactInput.addEventListener("input", updateResume);
 imageInput.addEventListener("change", updateResume);
 
-
 document.getElementById("downloadBtn")
-.addEventListener("click", function () {
+.addEventListener("click", function(){
 
-    const resume =
-        document.getElementById("resumeContent");
-
-    const opt = {
-
-        margin: 0,
-
-        filename: 'CVCraft_Resume.pdf',
-
-        image: {
-            type: 'jpeg',
-            quality: 1
-        },
-
-        html2canvas: {
-            scale: 3,
-            useCORS: true
-        },
-
-        jsPDF: {
-            unit: 'mm',
-            format: 'a4',
-            orientation: 'portrait'
-        }
-
-    };
-
-    html2pdf()
-        .from(resume)
-        .set(opt)
-        .save();
+    window.print();
 
 });
